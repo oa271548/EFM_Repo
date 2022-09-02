@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\LENOVO\Downloads\EFM_Repo\openssl-1.1\x86\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\LENOVO\Downloads\EFM_Repo\openssl-1.1\x86\include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\EFM.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>libcurl\include;openssl-1.1\x86\include;ChartDirector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\EFM.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\EFM.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\EFM.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;ftd2xx.lib;%(AdditionalDependencies);legacy_stdio_definitions.lib;ChartDirector\lib32\chartdir70.lib;libcurl_a.lib;Ws2_32.lib;Crypt32.lib;Wldap32.lib;Normaliz.lib</AdditionalDependencies>
+      <AdditionalOptions>/MAPINFO:EXPORTS </AdditionalOptions>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>libcurl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /D /Y /C ChartDirector\lib32\chartdir*.dll $(OutDir)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying ChartDirector DLL to output directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\EFM.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>libcurl\include;openssl-1.1\x86\include;ChartDirector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\EFM.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\EFM.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\EFM.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;ftd2xx.lib;%(AdditionalDependencies);legacy_stdio_definitions.lib;ChartDirector\lib32\chartdir70.lib;libcurl_a.lib;Ws2_32.lib;Crypt32.lib;Wldap32.lib;Normaliz.lib</AdditionalDependencies>
+      <AdditionalOptions>/MAPINFO:EXPORTS </AdditionalOptions>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>libcurl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddEditRecipient.cpp" />
+    <ClCompile Include="Alerts.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ClientsConnectedViewer.cpp" />
+    <ClCompile Include="chart.cpp" />
+    <ClCompile Include="ChartViewer.cpp" />
+    <ClCompile Include="ConfigEMailServer.cpp" />
+    <ClCompile Include="ConfigGSMGateway.cpp" />
+    <ClCompile Include="ConfigGSMModem.cpp" />
+    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ConnectedClient.cpp" />
+    <ClCompile Include="CSmtp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DlgAddRemoveRing.cpp" />
+    <ClCompile Include="DlgDebugger.cpp" />
+    <ClCompile Include="EFM.cpp" />
+    <ClCompile Include="EFMDlg.cpp" />
+    <ClCompile Include="EFMOptions.cpp" />
+    <ClCompile Include="EMailRecipients.cpp" />
+    <ClCompile Include="EventLog.cpp" />
+    <ClCompile Include="EventLogViewer.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="Gsm.cpp" />
+    <ClCompile Include="HTML.cpp" />
+    <ClCompile Include="lightningalarm.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="md5.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="numled.cpp" />
+    <ClCompile Include="OptionsAlerts.cpp" />
+    <ClCompile Include="OptionsDataLogging.cpp" />
+    <ClCompile Include="OptionsDataSharing.cpp" />
+    <ClCompile Include="OptionsDeltaAlarm.cpp" />
+    <ClCompile Include="OptionsGeneral.cpp" />
+    <ClCompile Include="OptionsHighFieldAlarm.cpp" />
+    <ClCompile Include="OptionsImageCapture.cpp" />
+    <ClCompile Include="OptionsLightningAlarm.cpp" />
+    <ClCompile Include="OptionsVeryHighFieldAlarm.cpp" />
+    <ClCompile Include="percent.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="PSOptions.cpp" />
+    <ClCompile Include="Registry.cpp" />
+    <ClCompile Include="selector.cpp" />
+    <ClCompile Include="Serial.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SerialEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SerialWnd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SMSRecipients.cpp" />
+    <ClCompile Include="speaker_lib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="strip.cpp" />
+    <ClCompile Include="TabCheckListBox.cpp" />
+    <ClCompile Include="toggle.cpp" />
+    <ClCompile Include="WaitDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EFM.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddEditRecipient.h" />
+    <ClInclude Include="Alerts.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="BITS.H" />
+    <ClInclude Include="ClientsConnectedViewer.h" />
+    <ClInclude Include="chart.h" />
+    <ClInclude Include="ChartViewer.h" />
+    <ClInclude Include="ConfigEMailServer.h" />
+    <ClInclude Include="ConfigGSMGateway.h" />
+    <ClInclude Include="ConfigGSMModem.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="ConnectedClient.h" />
+    <ClInclude Include="CSmtp.h" />
+    <ClInclude Include="DlgAddRemoveRing.h" />
+    <ClInclude Include="DlgDebugger.h" />
+    <ClInclude Include="EFM.h" />
+    <ClInclude Include="EFMDlg.h" />
+    <ClInclude Include="EFMOptions.h" />
+    <ClInclude Include="EMailRecipients.h" />
+    <ClInclude Include="EventLog.h" />
+    <ClInclude Include="EventLogViewer.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="Gsm.h" />
+    <ClInclude Include="HTML.h" />
+    <ClInclude Include="lightningalarm.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="numled.h" />
+    <ClInclude Include="OptionsAlerts.h" />
+    <ClInclude Include="OptionsDataLogging.h" />
+    <ClInclude Include="OptionsDataSharing.h" />
+    <ClInclude Include="OptionsDeltaAlarm.h" />
+    <ClInclude Include="OptionsGeneral.h" />
+    <ClInclude Include="OptionsHighFieldAlarm.h" />
+    <ClInclude Include="OptionsImageCapture.h" />
+    <ClInclude Include="OptionsLightningAlarm.h" />
+    <ClInclude Include="OptionsVeryHighFieldAlarm.h" />
+    <ClInclude Include="percent.h" />
+    <ClInclude Include="picture.h" />
+    <ClInclude Include="PSOptions.h" />
+    <ClInclude Include="Registry.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="selector.h" />
+    <ClInclude Include="Serial.h" />
+    <ClInclude Include="SerialEx.h" />
+    <ClInclude Include="SerialMFC.h" />
+    <ClInclude Include="SerialWnd.h" />
+    <ClInclude Include="SMSRecipients.h" />
+    <ClInclude Include="speaker_lib.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="strip.h" />
+    <ClInclude Include="TabCheckListBox.h" />
+    <ClInclude Include="toggle.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="VersionNo.h" />
+    <ClInclude Include="WaitDlg.h" />
+    <ClInclude Include="WINDRVR.H" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\1309906488_favicon[1].ico" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp_config.bmp" />
+    <Image Include="res\bmp_opti.bmp" />
+    <Image Include="res\bmp_peop.bmp" />
+    <Image Include="res\Boltek_ColorLoResSM.bmp" />
+    <Image Include="res\brightex-logo.bmp" />
+    <Image Include="res\brightex.bmp" />
+    <Image Include="res\EFM.ico" />
+    <Image Include="res\soundoff.bmp" />
+    <Image Include="res\soundon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\EFM.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Documentation\Changes.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libcrypto.lib" />
+    <Library Include="libssl.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

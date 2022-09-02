@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EFM", "EFM.vcxproj", "{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}.Debug|x86.ActiveCfg = Debug|Win32
+		{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}.Debug|x86.Build.0 = Debug|Win32
+		{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}.Release|x86.ActiveCfg = Release|Win32
+		{1F9DCBD6-3CC4-456C-B6FD-BCACAAE3A35D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84B64E65-3974-4027-9428-6F210D8625BA}
+	EndGlobalSection
+EndGlobal
